@@ -8,4 +8,94 @@
     
     import 'relative/path/to/stylesheet.scss';
 
-*/
+*/}
+:root {
+    --text-color: gray;
+    --bg-color: #ffffff;
+}
+body {
+    container-fluid: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+.todo-title {
+    text-align: center;
+    color: gray;
+    font-size: 15vh;
+
+    font-weight: ;
+
+    margin: 0.5rem 0;
+}
+
+ul li {
+    list-style-type: none;
+    color: gray;
+    text-align: left;
+    margin-top: 1rem;
+    font-size: 4vh;
+    margin-left: 0%;
+
+}
+
+.todo-input {
+    border: 1px solid #e2e8f0;
+    padding: 0.35rem 0.5rem;
+    border-radius: 4px;
+    width: 120vh;
+    max-width: 100%;
+    font-size: 1.6rem;
+}
+
+.Hoja {
+    
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+
+
+}
+
+.delete-btn {
+    margin-left: 1rem;
+    background-color: transparent;
+    border: none;
+    color: grey;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.delete-btn:hover {
+    background: rgba(229,62,62,0.08);
+}
+
+.Hoja ul {
+    padding: 0;
+    margin: 0;
+}
+
+.Hoja ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0.25rem 0;
+}
+
+.Hoja ul li .delete-btn {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(6px);
+    transition: opacity 150ms ease, transform 150ms ease, visibility 150ms;
+}
+
+.Hoja ul li:hover .delete-btn {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
