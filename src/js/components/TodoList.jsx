@@ -19,7 +19,7 @@ const TodoList = () => {
     };
 
     return (
-        <div className="todo-listas text-center">
+        <div className="todo-listas ">
             <div>
                 <h1 className="todo-title text-center mt-4">todos</h1>
 
