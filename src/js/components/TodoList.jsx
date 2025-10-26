@@ -43,7 +43,7 @@ const TodoList = () => {
                                     onClick={() => removeTodo(i)}
                                     aria-label={`Eliminar ${t}`}
                                 >
-                                    X
+                                    Eliminar
                                 </button>
                             </li>
                         ))}

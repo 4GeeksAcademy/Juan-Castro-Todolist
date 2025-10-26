@@ -1,11 +1,13 @@
 
 :root {
+
     --text-color: gray;
     --bg-color: #ffffff;
+    
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--bg-color);
+    background-color: ;
     margin: 0;
     padding: 0;
 }
@@ -32,26 +34,35 @@ ul li {
 }
 
 .todo-input {
+    margin : auto  ;
     border: 1px solid #e2e8f0;
     padding: 0.35rem 0.5rem;
     border-radius: 4px;
-    width: 120vh;
+    width: 200vh;
     max-width: 100%;
     font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.todo-input:focus,
+.todo-input:focus-visible {
+    outline: none;
+    box-shadow: none;           
+    border-color: #e2e8f0;  
+    textcolor: var(--text-color);    
 }
 
 .Hoja {
-    
+    margin: auto;
+    display: inline-block;
     background-color: var(--bg-color);
     padding: 1rem;
-    border-radius: 6px;
+    border-radius: 6px
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-
-
 }
 
 .delete-btn {
+    container-type: start;
     margin-left: 1rem;
     background-color: transparent;
     border: none;
