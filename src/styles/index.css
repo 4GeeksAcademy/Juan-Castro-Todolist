@@ -14,61 +14,66 @@ body {
 .todo-listas {
     min-height: 100%;
     background-color: var(--bg-color);
-    padding: 2rem;
+    padding: calc(var(--gutter) * 2);
+    display: flex;
+    justify-content: center; /* centra la Hoja en la página */
 }
 .todo-title {
     text-align: center;
-    color: gray;
-    font-size: 15vh;
+    color: var(--text-color);
+    font-size: clamp(1.5rem, 6vw, 3.5rem); /* responsive */
+    font-weight: 300;
     margin: 0.5rem 0;
 }
 
 ul li {
     list-style-type: none;
-    color: gray;
+    color: var(--text-color); /* evita que cambie a negro */
     text-align: left;
-    margin-top: 1rem;
-    font-size: 4vh;
-    margin-left: 0%;
-
+    margin-top: 0.75rem;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
 .todo-input {
-    margin : auto  ;
+    display: auto;
+    margin: 0.5rem auto;
     border: 1px solid #e2e8f0;
-    padding: 0.35rem 0.5rem;
+    padding: 0.5rem 0.75rem;
     border-radius: 4px;
-    width: 200vh;
+    width: 100%;
     max-width: 100%;
-    font-size: 1.6rem;
+    font-size: clamp(0.95rem, 2.2vw, 1.2rem);
     color: var(--text-color);
+    box-sizing: border-box;
 }
 
 .todo-input:focus,
 .todo-input:focus-visible {
     outline: none;
-    box-shadow: none;           
-    border-color: #e2e8f0;  
-    textcolor: var(--text-color);    
+    box-shadow: 0 0 0 3px rgba(226,232,240,0.35);
+    border-color: #e2e8f0;
+    color: var(--text-color);
 }
 
 .Hoja {
-    margin: auto;
-    display: inline-block;
+    width: 100%;
+    max-width: var(--max-width); /* limita el ancho en pantallas grandes */
+    margin: 0 auto;
+    display: block;
     background-color: var(--bg-color);
     padding: 1rem;
-    border-radius: 6px
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
 }
 
 .delete-btn {
-    container-type: start;
     margin-left: 1rem;
     background-color: transparent;
     border: none;
-    color: grey;
+    color: #9ca3af;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
 }
 
 .delete-btn:hover {
